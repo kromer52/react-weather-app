@@ -14,8 +14,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      
+     <div>
+      <Weather/>
+        </div>)}
       <footer>
           This project was coded by{" "}
           <a
@@ -44,8 +45,7 @@ function App() {
       
         </footer>
     </div>
-  );
-}
+  
 
 export default App;
 
