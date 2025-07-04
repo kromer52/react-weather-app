@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <h1>Axios Test</h1>
+      <h1>Weather App</h1>
       {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}
     </div>
   );
