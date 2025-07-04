@@ -15,7 +15,32 @@ function App() {
   return (
     <div>
       <h1>Weather App</h1>
-      {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}
+      <footer>
+          This project was coded by{" "}
+          <a
+            href="https://github.com/kromer52"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ilona
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/kromer52/react-weather-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://react-weather-app-rho-wine.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Vercel
+          </a>
+        </footer>
     </div>
   );
 }
