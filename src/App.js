@@ -40,7 +40,7 @@ function App() {
           >
             hosted on Vercel
           </a>
-          <button className="btn btn-primary">Hello</button>
+      
         </footer>
     </div>
   );
