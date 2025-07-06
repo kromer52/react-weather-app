@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Weather from './Weather';
+import React from "react";
+import Weather from "./Weather";
+import "./App.css";
 
-function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts/1')
-      .then(response => setData(response.data))
-      .catch(error => console.error(error));
-  }, []);
-
+export default function App() {
   return (
-     <div>
-      <Weather/>
-        </div>)}
-      <footer>
+    <div className="App">
+      <div className="container">
+        <Weather defaultCity="New York" />
+
+        <footer>
           This project was coded by{" "}
           <a
             href="https://github.com/kromer52"
@@ -42,11 +33,8 @@ function App() {
           >
             hosted on Vercel
           </a>
-      
         </footer>
+      </div>
     </div>
-  
-
-export default App;
-
-
+  );
+}
