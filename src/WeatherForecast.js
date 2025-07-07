@@ -11,24 +11,27 @@ export default function WeatherForecast(props) {
     setLoaded(false);
   }, [props.coordinates]);
 
-  function handleResponse(response) {
-    setForecast(response.data.daily);
-    setLoaded(true);
-  }
+ function handleResponse(response) {
+  console.log(response.data);
+  setForecast(response.data.daily);
+  setLoaded(true);
+}
+
 
   function load() {
-    let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
-    let longitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  const apiKey = "303634af30at1e0bobd77c2b1f682f81";
+  let longitude = props.coordinates.lon;
+  let latitude = props.coordinates.lat;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}`;
 
-    axios
+  axios
     .get(apiUrl)
     .then(handleResponse)
-    .catch(error => {
+    .catch((error) => {
       console.error("Forecast API error:", error);
     });
 }
+
 
 
   if (loaded) {
